@@ -225,4 +225,31 @@ $(document).ready(function() {
             })
         }
     });
+
+    // осталось теплиц на складе
+    // рандом от 15 до 35
+    function getRndInteger(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) ) + min;
+    }
+
+    const count = localStorage.getItem('bel_zavod_t_count');
+    const lastUpdateDate = localStorage.getItem('bel_zavod_t_update');
+    const nowDate = new Date().getTime();
+    const byDay = 24 * 60 * 60 * 1000;
+
+    if (lastUpdateDate && lastUpdateDate <= nowDate - byDay) {
+        let newCount = getRndInteger(15, 35);
+        localStorage.setItem('bel_zavod_t_count', newCount);
+        localStorage.setItem('bel_zavod_t_update', nowDate);
+    }
+    else {
+        if (count) $('.sklad_count').text(count);
+        else {
+            let newCount = getRndInteger(15, 35);
+            localStorage.setItem('bel_zavod_t_count', newCount);
+            localStorage.setItem('bel_zavod_t_update', nowDate);
+            $('.sklad_count').text(newCount);
+        }
+    }
+    
 });

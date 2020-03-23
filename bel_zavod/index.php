@@ -58,23 +58,15 @@
                     <p>СПЕЦПРЕДЛОЖЕНИЕ!</p>
                 </header>
                 <div class="body">
-                    <p>Белорусский завод теплиц</p>
-                    <p>открыл склад в Москве!</p>
+                    <p>Распродажа теплиц</p>
+                    <p>по ценам февраля!</p>
                 </div>
             </div>
-            <div class="sale">Дарим <span class="sale-text">2400 руб.</span> при заказе</div>
+            <div class="sale"> <span class="sale-text">Успейте до повышения цен!</span></div>
             <div class="catalog-form">
                 <div class="sticker">
-                    <p>Осталось теплиц на складе</p>
-                    <p>
-                        <?php
-                            $arr = array();
-                            for ($i = 20; $i <= 40; $i++) {
-                                array_push($arr, $i);
-                            }
-                            echo $arr[array_rand($arr)];
-                        ?>
-                    </p>
+                    <p>На складе по СТАРОЙ цене:</p>
+                    <p class="sklad_count"></p>
                     <!-- <span>→</span> -->
                 </div>
                 <form action="" method="post" id="catalog-form">
@@ -108,7 +100,7 @@
                 <div class="item">
                     <div class="icon"><img src="img/2icon.jpg" alt=""></div>
                     <div class="text">
-                        <p>Скидку до 2400 руб. в зависимости от длины теплицы</p>
+                        <p>Распродажа теплиц по ценам февраля!</p>
                     </div>
                 </div>
                 <div class="item">
